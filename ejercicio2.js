@@ -4,7 +4,7 @@ const sumar = (a, b) => a + b;
 while (true) {
     var precioIngresadoACalcular = parseFloat(prompt("Ingrese el precio del producto a calcular"));
     if (!isNaN(precioIngresadoACalcular) && precioIngresadoACalcular != "" && precioIngresadoACalcular != null) {
-        alert("ingresaste: $" + precioIngresadoACalcular + " a continuacion selecciona la cantidad de cuotas");
+        alert("ingresaste: $" + precioIngresadoACalcular + ", a continuacion selecciona la cantidad de cuotas");
         break;
     }
     else {
