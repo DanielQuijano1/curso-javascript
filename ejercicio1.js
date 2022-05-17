@@ -4,7 +4,7 @@ let bienvenida = prompt("Bienvenido a la calculadora, para seguir ingrese Y , pa
 
 bienvenida = bienvenida.toUpperCase
 
-while(bienvenida != "Y"){
+while (bienvenida != "Y") {
     alert("No se puede iniciarla calculadora")
     bienvenida = prompt("Ingrese Y para continuar")
 }
@@ -19,19 +19,19 @@ primerNumero = parseInt(primerNumero);
 
 segundoNumero = parseInt(segundoNumero);
 
-switch(operacion){
+switch (operacion) {
     case "+":
-        console.log(primerNumero + "+" + segundoNumero + "+" + (primerNumero + segundoNumero));
+        alert(primerNumero + "+" + segundoNumero + "+" + (primerNumero + segundoNumero));
         break;
     case "-":
-            console.log(primerNumero + "-" + segundoNumero + "-" + (primerNumero - segundoNumero));
-            break;
+        alert(primerNumero + "-" + segundoNumero + "-" + (primerNumero - segundoNumero));
+        break;
     case "*":
-        console.log(primerNumero + "*" + segundoNumero + "*" + (primerNumero * segundoNumero));
+        alert(primerNumero + "*" + segundoNumero + "*" + (primerNumero * segundoNumero));
         break;
     case "/":
-        console.log(primerNumero + "/" + segundoNumero + "/" + (primerNumero / segundoNumero));
+        alert(primerNumero + "/" + segundoNumero + "/" + (primerNumero / segundoNumero));
         break;
     default:
-        console.log("Perdon, no reconozco la operacion")
+        alert("Perdon, no reconozco la operacion")
 }
