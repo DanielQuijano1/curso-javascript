@@ -1,6 +1,7 @@
 //calculador de precio final en cuotas (pago de cuotas sobre un monto determinado)
 const sumar = (a, b) => a + b;
 
+
 while (true) {
     var precioIngresadoACalcular = parseFloat(prompt("Ingrese el precio del producto a calcular"));
     if (!isNaN(precioIngresadoACalcular) && precioIngresadoACalcular != "" && precioIngresadoACalcular != null) {
