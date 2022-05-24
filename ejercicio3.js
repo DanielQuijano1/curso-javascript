@@ -1,6 +1,6 @@
-class ProductoAVender {
+class Producto {
     constructor(nombre, precio) {
-        this.nombre = nombre.toLowerCase();
+        this.nombre = nombre.toUpperCase();
         this.precio = parseFloat(precio);
         this.vendido = false;
     }
@@ -12,7 +12,7 @@ class ProductoAVender {
     }
 }
 
-const = CarritoDeVentas = [];
+const CarritoDeVentas = [];
 
 while (true) {
     let productoIngresado = prompt("Ingrese el nombre Del producto que desee agregar al carrito, de lo contrario escriba ESC para salir").toUpperCase;
@@ -22,7 +22,7 @@ while (true) {
         let nombreProducto = productoIngresado;
         let precioProducto = prompt("ingrese el precio del producto");
         let productoVendido = false;
-        CarritoDeVentas.push(new ProductoAVender(nombreProducto, precioProducto, productoVendido));
+        CarritoDeVentas.push(new Producto (nombreProducto, precioProducto, productoVendido));
 
     }
 }
