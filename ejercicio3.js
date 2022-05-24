@@ -8,14 +8,14 @@ class Producto {
         return this.precio * 1.21;
     }
     vender() {
-        this.vendido = true
+        this.vendido = true;
     }
 }
 
-const CarritoDeVentas = [];
+const CarritoDeVentas = [ ];
 
 while (true) {
-    let productoIngresado = prompt("Ingrese el nombre Del producto que desee agregar al carrito, de lo contrario escriba ESC para salir").toUpperCase;
+    let productoIngresado = prompt("Ingrese el nombre Del producto que desee agregar al carrito, de lo contrario escriba ESC para salir");
     if (productoIngresado === "ESC") {
         break;
     } else {
@@ -27,7 +27,7 @@ while (true) {
     }
 }
 
-for (const productos of carrito) {
+for (const productos of CarritoDeVentas) {
     console.log("Producto: " + productos.nombre);
     console.log("Precio: $" + productos.precio);
     console.log("Precio final con IVA: $" + productos.sumarIVA());
