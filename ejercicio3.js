@@ -12,6 +12,7 @@ class Producto {
     }
 }
 
+
 const CarritoDeVentas = [ ];
 
 while (true) {

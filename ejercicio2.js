@@ -29,7 +29,7 @@ while (cuotas != 1 && cuotas != 3 && cuotas != 6) {
             break;
 
         case 6:
-            alert("el precio final de 3 cuotas es de: $" + sumar(precioIngresadoACalcular, (precioIngresadoACalcular * 0.35)));
+            alert("el precio final de 6 cuotas es de: $" + sumar(precioIngresadoACalcular, (precioIngresadoACalcular * 0.35)));
             break;
 
         default:
