@@ -14,7 +14,7 @@ class Producto {
     }
 }
 
-alert("Bienvenido a La Virgencita, el kiosco de tu barrio")
+alert("Bienvenido a La Virgencita, el kiosco de tu barrio.. a continuacion elige el producto que deseas agregar al carrito ")
 
 const CarritoDeVentas = [];
 
