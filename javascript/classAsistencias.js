@@ -10,4 +10,44 @@ class Asistencias{
         this.presentismo = presentismo;
         this.sueldoFinal = sueldoFinal;
     }
+
+    get getSueldo(){
+        return this.sueldo;
+    }
+
+    get getId(){
+        return this.id;
+    }
+
+    get getDNI(){
+        return this.dni;
+    }
+
+    get getAnio(){
+        return this.anio;
+    }
+
+    get getMes(){
+        return this.mes;
+    }
+
+    get getAsistencia(){
+        return this.asistencias;
+    }
+
+    get getTardes(){
+        return this.tardes;
+    }
+
+    get getHorasExtras(){
+        return this.horasExtras;
+    }
+
+    get getPresentismo(){
+        return this.presentismo;
+    }
+
+    get getSueldoFinal(){
+        return this.sueldoFinal;
+    }
 }

@@ -1,4 +1,12 @@
-const listaDeEmpleados = [];
+const listaEmpleados = [];
+
+const listaEmpleadosJSON = JSON.stringify(listaEmpleados);
+
+let verificar = JSON.parse(localStorage.getItem("listaEmpleadosJSON"));
+
+if(verificar == null){
+    localStorage.setItem("listaEmpleadosJSON",listaEmpleadosJSON);
+}
 
 let cargar = document.getElementById("cargarEmpleado");
 
@@ -27,9 +35,18 @@ function cargarEmpleado(e){
     let fechaDeAlta = document.getElementById("altaEmpleado").value;
     let sueldo = salario(puesto);
 
-    if(validarDatos(nombre) && validarDatos(apellido) && validarDatos(dni) && validarDatos(nacimiento) && validarDatos(localidad) && validarDatos(calle) && validarDatos(altura) && validarDatos(telefono) && validarDatos(puesto) && validarDatos(sueldo)){
+    if (existe(dni) == true){
+        alert("El empleado ya se encuentra cargado en la nomina")
+    }else if(validarDatos(nombre) && validarDatos(apellido) && validarDatos(dni) && validarDatos(nacimiento) && validarDatos(localidad) && validarDatos(calle) && validarDatos(altura) && validarDatos(telefono) && validarDatos(puesto) && validarDatos(sueldo)){
         let empleado = new Empleado(nombre,apellido,dni,nacimiento,localidad,calle,altura,telefono,puesto,sueldo,id,fechaDeAlta);
+        
+        const listaEmpleadosParse = JSON.parse(localStorage.getItem("listaEmpleadosJSON"));
+
         listaDeEmpleados.push(empleado)
+
+        const listaEmpleadosSt = JSON.stringify(listaEmpleadosParse);
+
+        localStorage.setItem("listaEmpleadosJSON",listaEmpleadosSt);
 
         let mostrar = empleado.devolucion();
 
@@ -61,6 +78,16 @@ function salario(cargo){
 function restart(e){
     e.preventDefault();
     document.querySelector("form").reset();
+}
+
+function existe(dniCargado){
+    const empleadoParse = JSON.parse(localStorage.getItem("listaEmpleadosJSON"));
+    console.log(empleadoParse);
+    for (i = 0; i < empleadoParse.length; i++){
+        if (dniCargado == empleadoParse[i].dni){
+            return true;
+        }
+    }
 }
 
 cargar.addEventListener("click",cargarEmpleado);

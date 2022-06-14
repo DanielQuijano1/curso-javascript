@@ -1,4 +1,8 @@
+let mostrarNomina = document.getElementById("consultaNomina");
+
 function menuConsultas(e){
     e.preventDefault();
-    location.href="consultas.html"
+    location.href="impresion.html"
 }
+
+mostrarNomina.addEventListener("click",menuConsultas)
