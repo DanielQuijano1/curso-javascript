@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Beauty Port</title>
     <link rel="stylesheet" href="/estilos/estilos.css">
 </head>
 
 <body>
     <img class="avatar" src="/imagenes/inicio_logo.png" alt="logo">
-    <h1>NOMINA DE EMPLEADOS</h1>
+    <h1>SUELDOS MENSUALES</h1>
+    <form>
+        <label for="mesTrabajado">Mes</label>
+        <input type="text" id="empleadoMes" placeholder="Ingrese el Mes">
+
+        <label for="anio">Año</label>
+        <input type="text" id="empleadoAnio" placeholder="Ingrese el año">
+
+        <input type="submit" value="Buscar" id="buscar">
+    </form>
+
     <a href="consultas.html">Volver al menu principal</a>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="/javascript/classEmpleados.js"></script>
-    <script src="/javascript/scriptsEmpleados.js"></script>
-    <script src="/javascript/scriptImpresion.js"></script>
+    <script src="/javascript/visualizarSueldosMensual.js"></script>
 </body>
 
 </html>

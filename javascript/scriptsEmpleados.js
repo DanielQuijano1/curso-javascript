@@ -4,11 +4,11 @@ const listaEmpleadosJSON = JSON.stringify(listaEmpleados);
 
 let verificar = JSON.parse(localStorage.getItem("listaEmpleadosJSON"));
 
-if(verificar == null){
-    localStorage.setItem("listaEmpleadosJSON",listaEmpleadosJSON);
-}
+verificar == null && localStorage.setItem("listaEmpleadosJSON",listaEmpleadosJSON)
 
 let cargar = document.getElementById("cargarEmpleado");
+
+let reset = document.getElementById("resetFormulario");
 
 function validarDatos(dato){
 
@@ -36,13 +36,18 @@ function cargarEmpleado(e){
     let sueldo = salario(puesto);
 
     if (existe(dni) == true){
-        alert("El empleado ya se encuentra cargado en la nomina")
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'El empleado ya se encuentra cargado en la nomina',
+    
+          })
     }else if(validarDatos(nombre) && validarDatos(apellido) && validarDatos(dni) && validarDatos(nacimiento) && validarDatos(localidad) && validarDatos(calle) && validarDatos(altura) && validarDatos(telefono) && validarDatos(puesto) && validarDatos(sueldo)){
         let empleado = new Empleado(nombre,apellido,dni,nacimiento,localidad,calle,altura,telefono,puesto,sueldo,id,fechaDeAlta);
         
         const listaEmpleadosParse = JSON.parse(localStorage.getItem("listaEmpleadosJSON"));
 
-        listaDeEmpleados.push(empleado)
+        listaEmpleadosParse.push(empleado);
 
         const listaEmpleadosSt = JSON.stringify(listaEmpleadosParse);
 
@@ -50,11 +55,17 @@ function cargarEmpleado(e){
 
         let mostrar = empleado.devolucion();
 
-        let confirmacion = confirm("Carga completada con Exito" + "\n" + mostrar);
+        let confirmacion = confirm("Carga completada con Exito" + "\n" + "\n" + mostrar);
 
         restart(e)
+
     }else{
-        alert("Revise los datos cargados")
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'Revise los datos cargados',
+    
+          })
     }
 }
 
@@ -72,7 +83,16 @@ function salario(cargo){
         return 82000;
     }else if(cargo == "Limpieza"){
         return 70000;
-    }
+    }else{
+        let otroSueldo=parseInt(prompt("Ingrese el suedo del puesto"));
+        let validar=isNaN(otroSueldo);
+    
+        if(otroSueldo!="" && validar==false){
+    
+          return otroSueldo;
+        
+        }
+      }
 }
 
 function restart(e){
@@ -82,7 +102,7 @@ function restart(e){
 
 function existe(dniCargado){
     const empleadoParse = JSON.parse(localStorage.getItem("listaEmpleadosJSON"));
-    console.log(empleadoParse);
+    
     for (i = 0; i < empleadoParse.length; i++){
         if (dniCargado == empleadoParse[i].dni){
             return true;

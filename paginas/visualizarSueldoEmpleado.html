@@ -5,67 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ejercicios Javacript</title>
+    <title>Beauty Port</title>
     <link rel="stylesheet" href="/estilos/estilos.css">
 </head>
 
 <body>
-
     <div class="menu">
-        <!--poner una imagen-->
         <img class="avatar" src="/imagenes/inicio_logo.png" alt="logo">
         <h1>Asistencias y Cargas Horarias</h1>
 
         <form>
+            <label for="idDni">DNI</label>
+            <input type="text" placeholder="Ingrese el DNI del empleado" id="empeladoBuscar">
 
-            <label for="idDni">ID/DNI</label>
-            <input type="text" placeholder="Ingrese DNI o ID del empleado" id="buscarEmpleado">
-            <input type="submit" value="Verificar" id="verificarEmpleado">
-
-            <label for="anio">Anio</label>
+            <label for="anio">AÑO</label>
             <select name="anio" id="empleadoAnio">
                 <option value="2022">2022</option>
                 <option value="2023">2023</option>
             </select>
 
             <label for="mesTrabajado">Mes</label>
-            <select name="mes" id="empleadoMes">
+            <select name="mes" id="empeladoMes">
                 <option value="Enero">Enero</option>
-                <option value="Febrero">Febrero</option>
+                <option value="febrero">febrero</option>
                 <option value="Marzo">Marzo</option>
                 <option value="Abril">Abril</option>
                 <option value="Mayo">Mayo</option>
                 <option value="Junio">Junio</option>
                 <option value="Julio">Julio</option>
                 <option value="Agosto">Agosto</option>
-                <option value="Septiempre">Septiempre</option>
+                <option value="Septiembre">Septiembre</option>
                 <option value="Octubre">Octubre</option>
                 <option value="Noviembre">Noviembre</option>
                 <option value="Diciembre">Diciembre</option>
             </select>
 
-            <label for="ausentes">Ausentes</label>
-            <input type="text" placeholder="Ingrese Ausentes" id="empleadoAusentes">
+            <input type="submit" value="Buscar" id="empleadoBuscar">
 
-            <label for="tardes">Llegadas fuera del horario</label>
-            <input type="text" placeholder="Ingrese cantidad de llegadas tarde" id="empleadoTardes">
+            <div id="copia"></div>
+            <div id="dolares"></div>
+            <input type="submit" value="Dolarizar" id="dolarizarSueldo">
 
-            <label for="horasExtras">Horas Extras:</label>
-            <input type="text" placeholder="Ingrese cantidad de horas extras" id="empleadoHorasExtras">
+            <div id="conversion"></div>
 
-            <input type="submit" name="cargar" id="cargarAsistencias">
-
-            <a href="inicio.html">Volver al menu principal</a>
-
+            <a href="consultas.html">Volver al menu principal</a>
         </form>
 
     </div>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="/javascript/classEmpleados.js"></script>
-    <script src="/javascript/classAsistencias.js"></script>
-    <script src="/javascript/scriptsEmpleados.js"></script>
-    <script src="/javascript/scriptsAsistencias.js"></script>
+    <script src="/javascript/scriptVisualizarSueldo"></script>
 
 </body>
 

@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ejercicios Javacript</title>
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <title>Beauty Port</title>
+    <link rel="stylesheet" href="/estilos/estilos.css">
 </head>
 
 <body>
 
     <div class="menu">
-
+        <img class="avatar" src="/imagenes/inicio_logo.png" alt="logo">
         <h1>Inicio de Sesion</h1>
 
         <form>
             <!-- nombre de usuario-->
             <label for="usuario">Usuario:</label>
-            <input type="text" placeholder="Ungrese Nombre De Usuario" id="user">
+            <input type="text" placeholder="Ingrese Nombre De Usuario" id="user">
 
             <!--contraseña-->
             <label for="contrasenia">Contraseña:</label>
@@ -26,14 +26,14 @@
 
             <!--boton de inicio-->
             <input type="submit" value="Log In" id="login">
-
+            <a href="#" id="restart">Olvide mis datos</a>
         </form>
 
     </div>
 
-    <script src="javascript/scriptsIndex.js"></script>
-
-    <script src="javascript/classUsuario.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/javascript/scriptsIndex.js"></script>
+    <script src="/javascript/classUsuario.js"></script>
 
 </body>
 

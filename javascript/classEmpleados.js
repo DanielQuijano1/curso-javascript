@@ -24,7 +24,7 @@ class Empleado {
         return this.nombre;
     }
 
-    set setNombre(nombre) {
+    setNombre(nombre) {
         this.nombre = nombre;
     }
 
@@ -32,7 +32,7 @@ class Empleado {
         return this.apellido;
     }
 
-    set setApellido(apellido) {
+    setApellido(apellido) {
         this.apellido = apellido
     }
 
@@ -40,7 +40,7 @@ class Empleado {
         return this.dni;
     }
 
-    set setDNI(dni) {
+    setDNI(dni) {
         this.dni = dni;
     }
 
@@ -48,7 +48,7 @@ class Empleado {
         return this.nacimiento;
     }
 
-    set setNacimiento(nacimiento) {
+    setNacimiento(nacimiento) {
         this.nacimiento = nacimiento;
     }
 
@@ -56,7 +56,7 @@ class Empleado {
         return this.localidad;
     }
 
-    set setLocalidad(localidad) {
+   setLocalidad(localidad) {
         this.localidad = localidad;
     }
 
@@ -64,7 +64,7 @@ class Empleado {
         return this.calle;
     }
 
-    set setCalle(calle) {
+    setCalle(calle) {
         this.calle = calle;
     }
 
@@ -72,7 +72,7 @@ class Empleado {
         return this.altura;
     }
 
-    set setAltura(altura) {
+   setAltura(altura) {
         this.altura = altura;
     }
 
@@ -80,7 +80,7 @@ class Empleado {
         return this.telefono;
     }
 
-    set setTelefono(telefono) {
+    setTelefono(telefono) {
         this.telefono = telefono;
     }
 
@@ -88,7 +88,7 @@ class Empleado {
         return this.puesto;
     }
 
-    set setPuesto(puesto) {
+    setPuesto(puesto) {
         this.puesto = puesto;
     }
 
@@ -96,7 +96,7 @@ class Empleado {
         return this.sueldo;
     }
 
-    set setSueldo(sueldo) {
+    setSueldo(sueldo) {
         this.sueldo = sueldo;
     }
 
@@ -104,7 +104,7 @@ class Empleado {
         return this.id;
     }
 
-    set setId(id) {
+    setId(id) {
         this.id = id;
     }
 
@@ -112,7 +112,7 @@ class Empleado {
         return this.fechaDeAlta;
     }
 
-    set setFechaDeAlta(fechaDeAlta) {
+    setFechaDeAlta(fechaDeAlta) {
         this.fechaDeAlta = fechaDeAlta;
     }
 
@@ -120,7 +120,7 @@ class Empleado {
         return this.fechaDeBaja;
     }
 
-    set setFechaDeBaja(fechaDeBaja) {
+    setFechaDeBaja(fechaDeBaja) {
         this.fechaDeBaja = fechaDeBaja;
     }
 

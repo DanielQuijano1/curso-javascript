@@ -12,7 +12,7 @@ class Asistencias{
     }
 
     get getSueldo(){
-        return this.sueldo;
+        return sueldo;
     }
 
     get getId(){

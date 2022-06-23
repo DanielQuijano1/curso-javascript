@@ -10,14 +10,26 @@
 </head>
 
 <body>
-    <img class="avatar" src="/imagenes/inicio_logo.png" alt="logo">
-    <h1>NOMINA DE EMPLEADOS</h1>
-    <a href="consultas.html">Volver al menu principal</a>
+    <div class="menu">
+        <img class="avatar" src="/imagenes/inicio_logo.png" alt="logo">
+        <h1>Visualizar empleado</h1>
+
+        <form>
+
+            <label for="idDni">Colocar DNI del empleado</label>
+            <input type="text" placeholder="Ingrese DNI del empleado" id="buscarEmpleado">
+
+            <div id="copia"></div>
+
+            <a href="consultas.html">Volver al menu principal</a>
+        </form>
+    </div>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/javascript/classEmpleados.js"></script>
     <script src="/javascript/scriptsEmpleados.js"></script>
-    <script src="/javascript/scriptImpresion.js"></script>
+    <script src="/javascript/scriptImpresionEmpleado.js"></script>
+
 </body>
 
 </html>

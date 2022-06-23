@@ -1,4 +1,4 @@
-//anio 2022
+//año 2022
 const marzo2022 = [];
 const abril2022 = [];
 const mayo2022 = [];
@@ -10,7 +10,7 @@ const octubre2022 = [];
 const noviembre2022 = [];
 const diciembre2022 = [];
 
-//anio 2023
+//año 2023
 const marzo2023 = [];
 const abril2023 = [];
 const mayo2023 = [];
@@ -41,11 +41,8 @@ function verificador(e) {
 
     let busquedaPorDNI = listaEmpleadoParse.some((empleado) => empleado.dni === idDni);
 
-    if (busquedaPorID || busquedaPorDNI) {
-        alert("El empleado se encuentra registrado, puede continuar")
-    } else {
-        alert("El empleado no se encuentra cargado en la nomina")
-    }
+    busquedaPorID || busquedaPorDNI ? Swal.fire("El empleado se encuentra registrado, puede continuar") : Swal.fire("El empleado no se encuentra cargago en la nomina, primero debe cargarlo en la nomina")
+
 }
 
 function cargarCompletarDatos(e) {
@@ -76,10 +73,10 @@ function cargarCompletarDatos(e) {
         }
 
         if (validarTodo(cargarTarde) && validarTodo(cargarHorasExtras) && validarTodo(cargarAusentes)) {
-            alert("los datos son correctos y cumplen su formato")
+            Swal.fire("los datos son correctos y cumplen su formato")
 
-            let sueldoFinal = sueldoEfimero + empleadoPresentismo((sueldoEfimero / 30 / 8) * cargarHorasExtras);
-            let empleadoAsistencia = new cargarAsistencias(idEfimero, dniEfimero, sueldoEfimero, cargarAnio, cargarMes, cargarAusentes, cargarTarde, cargarHorasExtras, empleadoPresentismo, sueldoFinal);
+            let sueldoFinal = parseInt(sueldoEfimero) + parseInt(empleadoPresentismo) + ((parseInt(sueldoEfimero) / 30 / 8) * parseInt(cargarHorasExtras).toFixed(2));
+            let empleadoAsistencia = new Asistencias(idEfimero, dniEfimero, sueldoEfimero, cargarAnio, cargarMes, cargarAusentes, cargarTarde, cargarHorasExtras, empleadoPresentismo, sueldoFinal);
 
             array1[0] = empleadoAsistencia;
 
@@ -89,14 +86,15 @@ function cargarCompletarDatos(e) {
                 listadoMes2023(cargarMes);
             }
         } else {
-            alert("Revise los Datos Cargados")
+            Swal.fire("Revise los Datos Cargados")
         }
     } else {
-        alert("El empleado que quiere actualizar no se encuentra en la nomina")
+        Swal.fire("El empleado que quiere actualizar no se encuentra en la nomina")
     }
 }
 
 function busquedaIdDni(a, b, c) {
+
     if (a) {
         const listaEmpleadoParseEfimero = JSON.parse(localStorage.getItem("listaEmpleadosJSON"));
         const listaPrevia = listaEmpleadoParseEfimero.filter((empleado) => empleado.dni.includes(c));
@@ -121,18 +119,102 @@ function busquedaIdDni(a, b, c) {
 
 function listadoMes2022(mes) {
     switch (mes) {
+        case "Enero":
+            const enero2022Parse = JSON.parse(localStorage.getItem("enero2022JSON"));
+            if (enero2022Parse == null) {
+                enero2022.push(array1);
+                const enero2022st = JSON.stringify(enero2022);
+                localStorage.setItem("enero2022JSON",enero2022st);
+                Swal.fire("Carga Exitosa")
+            } else {
+                for (i = 0; i < enero2022Parse.length; i++) {
+                    let dniABuscar = document.getElementById("buscarEmepleado").value;
+                    if (dniABuscar == enero2022Parse[i].dni) {
+                        Swal.fire("el empleado ya se encuentra cargado en el mes")
+                    } else {
+                        enero2022Parse.push(array1[0]);
+                        const enero2022st = JSON.stringify(enero2022Parse);
+                        localStorage.setItem("enero2022JSON", enero2022st);
+                    }
+                }
+            }
+            break;
+
+        case "Febrero":
+            const febrero2022Parse = JSON.parse(localStorage.getItem("febrero2022JSON"));
+            if (febrero2022Parse == null) {
+                febrero2022Parse.push(array1[0]);
+                const febrero2022st = JSON.stringify(febrero2022);
+                localStorage.setItem("febrero2022JSON",febrero2022st);
+                Swal.fire("Carga Exitosa")
+            } else {
+                for (i = 0; i < febrero2022Parse.length; i++) {
+                    let dniABuscar = document.getElementById("buscarEmepleado").value;
+                    if (dniABuscar == febrero2022Parse[i].dni) {
+                        Swal.fire("el empleado ya se encuentra cargado en el mes")
+                    } else {
+                        febrero2022Parse.push(array1[0]);
+                        const febrero2022st = JSON.stringify(febrero2022Parse);
+                        localStorage.setItem("febrero2022JSON", febrero2022st);
+                    }
+                }
+            }
+            break;
+
+        case "Marzo":
+            const marzo2022Parse = JSON.parse(localStorage.getItem("marzo2022JSON"));
+            if (marzo2022Parse == null) {
+                marzo2022Parse.push(array1[0]);
+                const marzo2022st = JSON.stringify(marzo2022);
+                localStorage.setItem("marzo2022JSON",marzo2022st);
+                Swal.fire("Carga Exitosa")
+            } else {
+                for (i = 0; i < marzo2022Parse.length; i++) {
+                    let dniABuscar = document.getElementById("buscarEmepleado").value;
+                    if (dniABuscar == marzo2022Parse[i].dni) {
+                        Swal.fire("el empleado ya se encuentra cargado en el mes")
+                    } else {
+                        marzo2022Parse.push(array1[0]);
+                        const marzo2022st = JSON.stringify(marzo2022Parse);
+                        localStorage.setItem("marzo2022JSON", marzo2022st);
+                    }
+                }
+            }
+            break;
+
+        case "Abril":
+            const abril2022Parse = JSON.parse(localStorage.getItem("abril2022JSON"));
+            if (abril2022Parse == null) {
+                abril2022Parse.push(array1[0]);
+                const abril2022st = JSON.stringify(abril2022);
+                localStorage.setItem("abril2022JSON",abril2022st);
+                Swal.fire("Carga Exitosa")
+            } else {
+                for (i = 0; i < abril2022Parse.length; i++) {
+                    let dniABuscar = document.getElementById("buscarEmepleado").value;
+                    if (dniABuscar == abril2022Parse[i].dni) {
+                        Swal.fire("el empleado ya se encuentra cargado en el mes")
+                    } else {
+                        abril2022Parse.push(array1[0]);
+                        const abril2022st = JSON.stringify(abril2022Parse);
+                        localStorage.setItem("abril2022JSON", abril2022st);
+                    }
+                }
+            }
+            break;
+
         case "Mayo":
             const mayo2022Parse = JSON.parse(localStorage.getItem("mayo2022JSON"));
             if (mayo2022Parse == null) {
-                mayo2022Parse(array1[0]);
+                mayo2022Parse.push(array1[0]);
                 const mayo2022st = JSON.stringify(mayo2022);
-                localStorage.setItem("mayo2022JSON,mayo2022st");
-                alert("Carga Exitosa")
+                localStorage.setItem("mayo2022JSON",mayo2022st);
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < mayo2022Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmepleado").value;
                     if (dniABuscar == mayo2022Parse[i].dni) {
-                        alert("el empleado ya se encuentra cargado en el mes")
+                        Swal.fire("el empleado ya se encuentra cargado en el mes")
                     } else {
                         mayo2022Parse.push(array1[0]);
                         const mayo2022st = JSON.stringify(mayo2022Parse);
@@ -147,12 +229,12 @@ function listadoMes2022(mes) {
                 junio2022.push(array1[0]);
                 const junio2022st = JSON.stringify(junio2022);
                 localStorage.setItem("junio2022JSON", junio2022st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < junio2022Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == junio2022Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         junio2022Parse.push(array1[0]);
                         const junio2022st = JSON.stringify(junio2022Parse);
@@ -167,15 +249,15 @@ function listadoMes2022(mes) {
                 julio2022.push(array1[0]);
                 const julio2022st = JSON.stringify(julio2022);
                 localStorage.setItem("julio2022JSON", julio2022st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < julio2022Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == julio2022Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         julio2022Parse.push(array1[0]);
-                        const junio2022st = JSON.stringify(julio2022Parse);
+                        const julio2022st = JSON.stringify(julio2022Parse);
                         localStorage.setItem("julio2022JSON", julio2022st);
                     }
                 }
@@ -187,12 +269,12 @@ function listadoMes2022(mes) {
                 agosto2022.push(array1[0]);
                 const agosto2022st = JSON.stringify(agosto2022);
                 localStorage.setItem("agosto2022JSON", agosto2022st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < agosto2022Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == agosto2022Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         agosto2022Parse.push(array1[0]);
                         const agosto2022st = JSON.stringify(agosto2022Parse);
@@ -207,12 +289,12 @@ function listadoMes2022(mes) {
                 septiembre2022.push(array1[0]);
                 const septiembre2022st = JSON.stringify(septiembre2022);
                 localStorage.setItem("septiembre2022JSON", septiembre2022st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < septiembre2022Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == septiembre2022Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         septiembre2022Parse.push(array1[0]);
                         const septiembre2022st = JSON.stringify(septiembre2022Parse);
@@ -227,12 +309,12 @@ function listadoMes2022(mes) {
                 octubre2022.push(array1[0]);
                 const octubre2022st = JSON.stringify(octubre2022);
                 localStorage.setItem("octubre2022JSON", octubre2022st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < octubre2022Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == octubre2022Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         octubre2022Parse.push(array1[0]);
                         const octubre2022st = JSON.stringify(octubre2022Parse);
@@ -247,12 +329,12 @@ function listadoMes2022(mes) {
                 noviembre2022.push(array1[0]);
                 const noviembre2022st = JSON.stringify(noviembre2022);
                 localStorage.setItem("noviembre2022JSON", noviembre2022st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < noviembre2022Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == noviembre2022Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         noviembre2022Parse.push(array1[0]);
                         const noviembre2022st = JSON.stringify(noviembre2022Parse);
@@ -267,12 +349,12 @@ function listadoMes2022(mes) {
                 diciembre2022.push(array1[0]);
                 const diciembre2022st = JSON.stringify(diciembre2022);
                 localStorage.setItem("diciembre2022JSON", diciembre2022st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < diciembre2022Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == diciembre2022Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         diciembre2022Parse.push(array1[0]);
                         const diciembre2022st = JSON.stringify(diciembre2022Parse);
@@ -281,7 +363,7 @@ function listadoMes2022(mes) {
                 }
             }
             break;
-        default: alert("El mes no esta en curso")
+        default: Swal.fire("El mes no esta en curso")
     }
 }
 
@@ -293,12 +375,12 @@ function listadoMes2023(mes) {
                 enero2023.push(array1[0]);
                 const enero2023st = JSON.stringify(enero2023);
                 localStorage.setItem("enero2023JSON", enero2023st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < enero2023Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == enero2023Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         enero2023Parse.push(array1[0]);
                         const enero2023st = JSON.stringify(enero2023Parse);
@@ -313,12 +395,12 @@ function listadoMes2023(mes) {
                 febrero2023.push(array1[0]);
                 const febrero2023st = JSON.stringify(febrero2023);
                 localStorage.setItem("febrero2023JSON", febrero2023st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < febrero2023Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == febrero2023Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         febrero2023Parse.push(array1[0]);
                         const febrero2023st = JSON.stringify(febrero2023Parse);
@@ -333,12 +415,12 @@ function listadoMes2023(mes) {
                 marzo2023.push(array1[0]);
                 const marzo2023st = JSON.stringify(marzo2023);
                 localStorage.setItem("marzo2023JSON", marzo2023st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < marzo2023Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == marzo2023Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         marzo2023Parse.push(array1[0]);
                         const marzo2023st = JSON.stringify(marzo2023Parse);
@@ -353,12 +435,12 @@ function listadoMes2023(mes) {
                 Abril2023.push(array1[0]);
                 const Abril2023st = JSON.stringify(Abril2023);
                 localStorage.setItem("Abril2023JSON", Abril2023st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < Abril2023Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == Abril2023Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         Abril2023Parse.push(array1[0]);
                         const Abril2023st = JSON.stringify(Abril2023Parse);
@@ -373,12 +455,12 @@ function listadoMes2023(mes) {
                 mayo2023Parse(array1[0]);
                 const mayo2023st = JSON.stringify(mayo2023);
                 localStorage.setItem("mayo2023JSON,mayo2023st");
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < mayo2023Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmepleado").value;
                     if (dniABuscar == mayo2023Parse[i].dni) {
-                        alert("el empleado ya se encuentra cargado en el mes")
+                        Swal.fire("el empleado ya se encuentra cargado en el mes")
                     } else {
                         mayo2023Parse.push(array1[0]);
                         const mayo2023st = JSON.stringify(mayo2023Parse);
@@ -393,12 +475,12 @@ function listadoMes2023(mes) {
                 junio2023.push(array1[0]);
                 const junio2023st = JSON.stringify(junio2023);
                 localStorage.setItem("junio2023JSON", junio2023st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < junio2023Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == junio2023Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         junio2023Parse.push(array1[0]);
                         const junio2023st = JSON.stringify(junio2023Parse);
@@ -413,12 +495,12 @@ function listadoMes2023(mes) {
                 julio2023.push(array1[0]);
                 const julio2023st = JSON.stringify(julio2023);
                 localStorage.setItem("julio2023JSON", julio2023st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < julio2023Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == julio2023Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         julio2023Parse.push(array1[0]);
                         const julio2023st = JSON.stringify(julio2023Parse);
@@ -433,12 +515,12 @@ function listadoMes2023(mes) {
                 agosto2023.push(array1[0]);
                 const agosto2023st = JSON.stringify(agosto2023);
                 localStorage.setItem("agosto2023JSON", agosto2023st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < agosto2023Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == agosto2023Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         agosto2023Parse.push(array1[0]);
                         const agosto2023st = JSON.stringify(agosto2023Parse);
@@ -453,12 +535,12 @@ function listadoMes2023(mes) {
                 septiembre2023.push(array1[0]);
                 const septiembre2023st = JSON.stringify(septiembre2023);
                 localStorage.setItem("septiembre2023JSON", septiembre2023st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < septiembre2023Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == septiembre2023Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         septiembre2023Parse.push(array1[0]);
                         const septiembre2023st = JSON.stringify(septiembre2023Parse);
@@ -473,12 +555,12 @@ function listadoMes2023(mes) {
                 octubre2023.push(array1[0]);
                 const octubre2023st = JSON.stringify(octubre2023);
                 localStorage.setItem("octubre2023JSON", octubre2023st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < octubre2023Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == octubre2023Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         octubre2023Parse.push(array1[0]);
                         const octubre2023st = JSON.stringify(octubre2023Parse);
@@ -493,12 +575,12 @@ function listadoMes2023(mes) {
                 noviembre2032.push(array1[0]);
                 const noviembre2023st = JSON.stringify(noviembre2023);
                 localStorage.setItem("noviembre2023JSON", noviembre2023st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < noviembre2023Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == noviembre2023Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         noviembre2023Parse.push(array1[0]);
                         const noviembre2023st = JSON.stringify(noviembre2023Parse);
@@ -513,12 +595,12 @@ function listadoMes2023(mes) {
                 diciembre2023.push(array1[0]);
                 const diciembre2023st = JSON.stringify(diciembre2023);
                 localStorage.setItem("diciembre2023JSON", diciembre2023st)
-                alert("Carga Exitosa")
+                Swal.fire("Carga Exitosa")
             } else {
                 for (i = 0; i < diciembre2023Parse.length; i++) {
                     let dniABuscar = document.getElementById("buscarEmpleado").value;
                     if (dniABuscar == diciembre2023Parse[i].dni) {
-                        alert("El Empleado ya se encuentra cargado en el mes")
+                        Swal.fire("El Empleado ya se encuentra cargado en el mes")
                     } else {
                         diciembre2023Parse.push(array1[0]);
                         const diciembre2022st = JSON.stringify(diciembre2023Parse);
@@ -530,13 +612,13 @@ function listadoMes2023(mes) {
     }
 }
 
-function validarTodo(dato){
-    if(dato == "" || isNaN(dato)){
+function validarTodo(dato) {
+    if (dato == "" || isNaN(dato)) {
         return false;
-    }else if(dato != "" && !isNaN(dato)){
+    } else if (dato != "" && !isNaN(dato)) {
         return true;
     }
 }
 
-verificars.addEventListener("click",verificador);
-cargarAsistencia.addEventListener("click",cargarCompletarDatos)
+verificars.addEventListener("click", verificador);
+cargarAsistencia.addEventListener("click", cargarCompletarDatos);
