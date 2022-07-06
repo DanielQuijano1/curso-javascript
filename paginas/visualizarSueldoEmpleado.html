@@ -10,48 +10,62 @@
 </head>
 
 <body>
-    <div class="menu">
-        <img class="avatar" src="/imagenes/inicio_logo.png" alt="logo">
-        <h1>Asistencias y Cargas Horarias</h1>
+    <header class="headerMenu">
+        <div class="tituloMenu">beauty port</div>
+    </header>
 
-        <form>
-            <label for="idDni">DNI</label>
-            <input type="text" placeholder="Ingrese el DNI del empleado" id="empeladoBuscar">
 
-            <label for="anio">AÑO</label>
-            <select name="anio" id="empleadoAnio">
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-            </select>
+    <main>
+        <div class="menu">
+            <img class="avatar" src="/imagenes/inicio_logo.png" alt="logo">
+            <h1>Asistencias y Cargas Horarias</h1>
 
-            <label for="mesTrabajado">Mes</label>
-            <select name="mes" id="empeladoMes">
-                <option value="Enero">Enero</option>
-                <option value="febrero">febrero</option>
-                <option value="Marzo">Marzo</option>
-                <option value="Abril">Abril</option>
-                <option value="Mayo">Mayo</option>
-                <option value="Junio">Junio</option>
-                <option value="Julio">Julio</option>
-                <option value="Agosto">Agosto</option>
-                <option value="Septiembre">Septiembre</option>
-                <option value="Octubre">Octubre</option>
-                <option value="Noviembre">Noviembre</option>
-                <option value="Diciembre">Diciembre</option>
-            </select>
+            <form>
+                <label for="idDni">DNI</label>
+                <input type="text" placeholder="Ingrese el DNI del empleado" id="empeladoBuscar">
 
-            <input type="submit" value="Buscar" id="empleadoBuscar">
+                <label for="anio">AÑO</label>
+                <select name="anio" id="empleadoAnio">
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                </select>
 
-            <div id="copia"></div>
-            <div id="dolares"></div>
-            <input type="submit" value="Dolarizar" id="dolarizarSueldo">
+                <label for="mesTrabajado">Mes</label>
+                <select name="mes" id="empeladoMes">
+                    <option value="Enero">Enero</option>
+                    <option value="febrero">febrero</option>
+                    <option value="Marzo">Marzo</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Mayo">Mayo</option>
+                    <option value="Junio">Junio</option>
+                    <option value="Julio">Julio</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Septiembre">Septiembre</option>
+                    <option value="Octubre">Octubre</option>
+                    <option value="Noviembre">Noviembre</option>
+                    <option value="Diciembre">Diciembre</option>
+                </select>
 
-            <div id="conversion"></div>
+                <input type="submit" value="Buscar" id="empleadoBuscar">
 
-            <a href="consultas.html">Volver al menu principal</a>
-        </form>
+                <div id="copia"></div>
+                <div id="dolares"></div>
+                <input type="submit" value="Dolarizar" id="dolarizarSueldo">
 
-    </div>
+                <div id="conversion"></div>
+
+                <a href="consultas.html">Volver al menu principal</a>
+            </form>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <p>Todos los Derechos Reservados</p>
+        <p>Copyright©BeautyPort - Proyecto Daniel Quijano</p>
+    </footer>
+
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/javascript/scriptVisualizarSueldo"></script>

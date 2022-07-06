@@ -5,32 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beauty Port</title>
+    <title>Beauty Port - peluqueria eco-friendly</title>
+    <link rel="shortcut icon" href="/imagenes/inicio_logo.png">
+    <!--estilos de la pagina-->
     <link rel="stylesheet" href="/estilos/estilos.css">
 </head>
 
 <body>
+    <!--Encabezado de la pagina-->
+    <header class="headerMenu">
+        <div class="tituloMenu">beauty port</div>
+    </header>
 
-    <div class="menu">
-        <img class="avatar" src="/imagenes/inicio_logo.png" alt="logo">
-        <h1>Inicio de Sesion</h1>
+    <!--Cuerpo principal de la pagina-->
+    <main>
+        <div class="menu">
+            <img class="avatar" src="/imagenes/inicio_logo.png" alt="logo">
+            <h1>Inicio de Sesion</h1>
 
-        <form>
-            <!-- nombre de usuario-->
-            <label for="usuario">Usuario:</label>
-            <input type="text" placeholder="Ingrese Nombre De Usuario" id="user">
+            <form>
+                <!-- nombre de usuario-->
+                <label for="usuario">Usuario:</label>
+                <input type="text" placeholder="Ingrese Nombre De Usuario" id="user">
 
-            <!--contraseña-->
-            <label for="contrasenia">Contraseña:</label>
-            <input type="password" placeholder="Ingrese Su Contraseña" id="pass">
+                <!--contraseña-->
+                <label for="contrasenia">Contraseña:</label>
+                <input type="password" placeholder="Ingrese Su Contraseña" id="pass">
 
-            <!--boton de inicio-->
-            <input type="submit" value="Log In" id="login">
-            <a href="#" id="restart">Olvide mis datos</a>
-        </form>
+                <!--boton de inicio-->
+                <input type="submit" value="Log In" id="login">
+                <a href="#" id="restart">Olvide mis datos</a>
+            </form>
+        </div>
+    </main>
+    
+    <!--Pie de pagina-->
+    <footer>
+        <p>Todos los Derechos Reservados</p>
+        <p>Copyright©BeautyPort - Proyecto Daniel Quijano</p>
+    </footer>
 
-    </div>
-
+    <!--links de scripts JS-->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/javascript/scriptsIndex.js"></script>
     <script src="/javascript/classUsuario.js"></script>

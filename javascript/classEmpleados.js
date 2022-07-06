@@ -1,3 +1,8 @@
+//------------------------------------------------------------
+//              CLASE EMPLEADO
+//  recibe todos los parametros del input para cargar empleados
+//------------------------------------------------------------
+
 class Empleado {
 
     constructor(nombre, apellido, dni, nacimiento, localidad, calle, altura, telefono, puesto, sueldo, id, fechaDeAlta, fechaDeBaja) {
@@ -20,6 +25,9 @@ class Empleado {
         return "Nombre del Empleado: " + this.nombre + "\n" + "Apellido del Empleado: " + this.apellido + "\n" + "DNI: " + this.dni + "\n" + "Fecha de Nacimiento: " + this.nacimiento + "\n" + "Localidad: " + this.localidad + "\n" + "Domicilio: " + this.calle + "\n" + "N°: " + this.altura + "\n" + "Telefono: " + this.telefono + "\n" + "Puesto: " + this.puesto + "\n" + "Sueldo: " + this.sueldo + "\n";
     }
 
+//------------------------------------------------------------
+//              METODOS GET Y SET
+//------------------------------------------------------------
     get getNombre() {
         return this.nombre;
     }

@@ -10,38 +10,53 @@
 </head>
 
 <body>
-    <div class="menu">
-        <img class="avatar" src="/imagenes/inicio_logo.png" alt="logo">
-        <h1>Asistencias y Cargas Horarias</h1>
 
-        <form>
+    <header class="headerMenu">
+        <div class="tituloMenu">beauty port</div>
+    </header>
 
-            <label for="idDni">ID/DNI</label>
-            <input type="text" placeholder="Ingrese su numero de DNI o ID de empleado" id="editarEmpleado">
+    
+    <main>
+        <div class="menu">
+            <img class="avatar" src="/imagenes/inicio_logo.png" alt="logo">
+            <h1>Asistencias y Cargas Horarias</h1>
 
-            <input type="submit" value="Verificar" id="verificarEmpleado">
+            <form>
 
-            <label for="edits"> Seleccione la propiedad a editar</label>
+                <label for="idDni">ID/DNI</label>
+                <input type="text" placeholder="Ingrese su numero de DNI o ID de empleado" id="editarEmpleado">
 
-            <select name="puesto" id="empleadoEdicion">
-                <option value="Nombre">Nombre</option>
-                <option value="Apellido">Apellido</option>
-                <option value="DNI">DNI</option>
-                <option value="Localidad">Localidad</option>
-                <option value="Calle">Calle</option>
-                <option value="Altura">Altura</option>
-                <option value="Telefono">Telefono</option>
-                <option value="Puesto">Puesto</option>
-                <option value="Sueldo">Sueldo</option>
-            </select>
+                <input type="submit" value="Verificar" id="verificarEmpleado">
 
-            <input type="text" placeholder="Ingrese el nuevo valor" id="empleadoCambio">
-            <input type="submit" value="Guardar Cambios" id="empleadoGuardarCambios">
+                <label for="edits"> Seleccione la propiedad a editar</label>
 
-            <a href="consultas.html">Volver al menu principal</a>
-        </form>
+                <select name="puesto" id="empleadoEdicion">
+                    <option value="Nombre">Nombre</option>
+                    <option value="Apellido">Apellido</option>
+                    <option value="DNI">DNI</option>
+                    <option value="Localidad">Localidad</option>
+                    <option value="Calle">Calle</option>
+                    <option value="Altura">Altura</option>
+                    <option value="Telefono">Telefono</option>
+                    <option value="Puesto">Puesto</option>
+                    <option value="Sueldo">Sueldo</option>
+                </select>
 
-    </div>
+                <input type="text" placeholder="Ingrese el nuevo valor" id="empleadoCambio">
+                <input type="submit" value="Guardar Cambios" id="empleadoGuardarCambios">
+
+                <a href="consultas.html">Volver al menu principal</a>
+            </form>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <p>Todos los Derechos Reservados</p>
+        <p>Copyright©BeautyPort - Proyecto Daniel Quijano</p>
+    </footer>
+
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/javascript/classEmpleadoPrueba.js"></script>

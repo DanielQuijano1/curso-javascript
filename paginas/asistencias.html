@@ -10,56 +10,66 @@
 </head>
 
 <body>
+    <header class="headerMenu">
+        <div class="tituloMenu">beauty port</div>
+    </header>
 
-    <div class="menu">
-        <!--poner una imagen-->
-        <img class="avatar" src="/imagenes/inicio_logo.png" alt="logo">
-        <h1>Asistencias y Cargas Horarias</h1>
+    <main>
+        <div class="menu">
+            <!--poner una imagen-->
+            <img class="avatar" src="/imagenes/inicio_logo.png" alt="logo">
+            <h1>Asistencias y Cargas Horarias</h1>
 
-        <form>
+            <form>
 
-            <label for="idDni">ID/DNI</label>
-            <input type="text" placeholder="Ingrese DNI o ID del empleado" id="buscarEmpleado">
-            <input type="submit" value="Verificar" id="verificarEmpleado">
+                <label for="idDni">ID/DNI</label>
+                <input type="text" placeholder="Ingrese DNI o ID del empleado" id="buscarEmpleado">
+                <input type="submit" value="Verificar" id="verificarEmpleado">
 
-            <label for="anio">Anio</label>
-            <select name="anio" id="empleadoAnio">
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-            </select>
+                <label for="anio">Anio</label>
+                <select name="anio" id="empleadoAnio">
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                </select>
 
-            <label for="mesTrabajado">Mes</label>
-            <select name="mes" id="empleadoMes">
-                <option value="Enero">Enero</option>
-                <option value="Febrero">Febrero</option>
-                <option value="Marzo">Marzo</option>
-                <option value="Abril">Abril</option>
-                <option value="Mayo">Mayo</option>
-                <option value="Junio">Junio</option>
-                <option value="Julio">Julio</option>
-                <option value="Agosto">Agosto</option>
-                <option value="Septiempre">Septiempre</option>
-                <option value="Octubre">Octubre</option>
-                <option value="Noviembre">Noviembre</option>
-                <option value="Diciembre">Diciembre</option>
-            </select>
+                <label for="mesTrabajado">Mes</label>
+                <select name="mes" id="empleadoMes">
+                    <option value="Enero">Enero</option>
+                    <option value="Febrero">Febrero</option>
+                    <option value="Marzo">Marzo</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Mayo">Mayo</option>
+                    <option value="Junio">Junio</option>
+                    <option value="Julio">Julio</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Septiempre">Septiempre</option>
+                    <option value="Octubre">Octubre</option>
+                    <option value="Noviembre">Noviembre</option>
+                    <option value="Diciembre">Diciembre</option>
+                </select>
 
-            <label for="ausentes">Ausentes</label>
-            <input type="text" placeholder="Ingrese Ausentes" id="empleadoAusentes">
+                <label for="ausentes">Ausentes</label>
+                <input type="text" placeholder="Ingrese Ausentes" id="empleadoAusentes">
 
-            <label for="tardes">Llegadas fuera del horario</label>
-            <input type="text" placeholder="Ingrese cantidad de llegadas tarde" id="empleadoTardes">
+                <label for="tardes">Llegadas fuera del horario</label>
+                <input type="text" placeholder="Ingrese cantidad de llegadas tarde" id="empleadoTardes">
 
-            <label for="horasExtras">Horas Extras:</label>
-            <input type="text" placeholder="Ingrese cantidad de horas extras" id="empleadoHorasExtras">
+                <label for="horasExtras">Horas Extras:</label>
+                <input type="text" placeholder="Ingrese cantidad de horas extras" id="empleadoHorasExtras">
 
-            <input type="submit" name="cargar" id="cargarAsistencias">
+                <input type="submit" name="cargar" id="cargarAsistencias">
 
-            <a href="inicio.html">Volver al menu principal</a>
+                <a href="inicio.html">Volver al menu principal</a>
 
-        </form>
+            </form>
+        </div>
+    </main>
 
-    </div>
+    <footer>
+        <p>Todos los Derechos Reservados</p>
+        <p>Copyright©BeautyPort - Proyecto Daniel Quijano</p>
+    </footer>
+
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/javascript/classEmpleados.js"></script>

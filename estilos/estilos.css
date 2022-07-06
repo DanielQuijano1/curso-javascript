@@ -1,100 +1,169 @@
-*{
+* {
     margin: 0;
     padding: 0;
+
 }
 
 body {
-        margin: 0;
-        padding: 0;
-        background-image: url(../imagenes/04f560bb-b7ad-4bbd-955f-f5fd67e5d031.jpg) ;
-        font-family: Arial, Helvetica, sans-serif;
-        height: 100vh;
-    }
+    margin: 0;
+    padding: 0;
+    background-image: url(../imagenes/04f560bb-b7ad-4bbd-955f-f5fd67e5d031.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+.headerMenu{
+    width: 100%;
+    height: 6%;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 20px;
+}
+
+.tituloMenu{
+    color: red;
+    font-size: 2.5rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: rgba(255, 166, 166, 0.678) 0px 0px 5px;;
+}
 
 
-.menu .avatar{
+.menu .avatar {
     width: 100px;
-    height:  100px;
+    height: 100px;
     border-radius: 20%;
     position: absolute;
     top: -50px;
     left: 38%;
-    }
+}
 
- .menu{
-        margin-top: 2%;
-        width: 400px;
-        height: 650px;
-        background: #fff;
-        color: #000;
-        top: 50%;
-        left: 50%;
-        position: absolute;
-        transform: translate(-50%,-50%);
-        box-sizing: border-box;
-        padding: 70px 30px;
-        box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 20px;
-        border-radius: 10px;
-    }
+.menu {
+    margin-top: 2%;
+    width: 400px;
+    background: #fff;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 20px;
+    border-radius: 10px;
+}
 
-    .menu h1{
-        margin: 0;
-        padding: 0 0 20px;
-        text-align: center;
-        font-size: 22px;
-    }
-    .menu label{
-        margin: 0;
-        padding: 0;
-        font-weight: bold;
-        display:block;
-    }
-    
-    .menu input{
-        width: 100%;
-        margin-top: 0;
-        margin-bottom: 4%;
-    }
-    
-    .menu input[type="text"]{
-        border: none;
-        border-bottom: 1px solid #000;
-        background: transparent;
-        outline: none;
-        height: 40px;
-        color:#000;
-        font-size: 16px;
-    
-    }
+.menu h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
 
-    .menu input[type="password"]{
-        border: none;
-        border-bottom: 1px solid #000;
-        background: transparent;
-        outline: none;
-        height: 40px;
-        color:#000;
-        font-size: 16px;
-    
-    }
-    
-    .menu input[type="submit"]{
-        margin-top: 4%;
-        margin-bottom: 4%;
-        border: none;
-        outline:none;
-        height: 40px;
-        background: rgb(252, 107, 107);
-        color: #000;
-        font-size: 18px;
-        border-radius: 20px;
-    
-    }
-    
-    .menu a{
-        text-decoration: none;
-        font-size: 12px;
-        line-height: 20px;
-        color: darkgrey;
-        margin: auto;
-    }
+.menu label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.menu input {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 4%;
+}
+
+.menu input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000;
+    font-size: 16px;
+
+}
+
+.menu input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000;
+    font-size: 16px;
+
+}
+
+.menu input[type="submit"] {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(252, 107, 107);
+    color: #000;
+    font-size: 18px;
+    border-radius: 20px;
+
+}
+
+.menu input[type="submit"]:active {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(250, 35, 35);
+    color: #000;
+    font-size: 18px;
+    border-radius: 20px;
+
+}
+
+
+
+.menu a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+    margin: auto;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: 8%;
+    bottom: 0;
+    background-color: #4b4849;
+    padding: 20px 0px;
+}
+
+footer p {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    color: #b1a7a6;
+    font-weight: lighter;
+    line-height: normal;
+}
+
+footer a {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: aliceblue;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.centrado{
+    text-align: center;
+}
+
+.escalar{
+    height:1100px;
+}
+
+.posicionar{
+    position: relative;
+}
